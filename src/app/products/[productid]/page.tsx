@@ -1,5 +1,5 @@
 import { Metadata } from "next"
-
+import Link from "next/link"
 type Props = {
     params: {
         productid: string;
