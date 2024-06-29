@@ -1,19 +1,18 @@
-import UserAnalytics from "@/components/UserAnalytics";
-import RevenueMetrics from "@/components/RevenueMetrics";
-import Notifications from "@/components/Notifications";
-
 export default function DashboardLayout({
     children,
     users,
     revenue,
-    notification
+    notification,
+    login
   }: {
     children: React.ReactNode,
     users: React.ReactNode,
     revenue: React.ReactNode,
     notification: React.ReactNode,
+    login: React.ReactNode,
   }) {
-    return (
+    const isLogin = true;
+    return isLogin ?(
       <div>
         <div>{children}</div>
         <div style={{display:"flex"}}>
@@ -24,6 +23,6 @@ export default function DashboardLayout({
             <div style={{display:"flex", flex:1}}>{notification}</div>
         </div>
       </div>
-    )
+    ) : ( login )
   }
   
